@@ -1,14 +1,14 @@
-def calculate_grade(marks):
-    if marks >= 90:
-        return "A"
-    elif marks >= 75:
-        return "B"
-    elif marks >= 50:
-        return "C"
-    else:
-        return "F"
+students = [
+    {"name": "Rahul", "roll_no": 101},
+    {"name": "Priya", "roll_no": 102}
+]
 
-marks = 85
-print("Marks:", marks)
-print("Grade:", calculate_grade(marks))
+def search_student(roll_no):
+    for student in students:
+        if student["roll_no"] == roll_no:
+            return student
+    return "Student not found"
+
+print(search_student(102))
+
 
