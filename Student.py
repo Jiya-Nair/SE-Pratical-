@@ -1,16 +1,14 @@
-students = []
+def calculate_grade(marks):
+    if marks >= 90:
+        return "A"
+    elif marks >= 75:
+        return "B"
+    elif marks >= 50:
+        return "C"
+    else:
+        return "F"
 
-def add_student(name, roll_no):
-    students.append({
-        "name": name,
-        "roll_no": roll_no
-    })
+marks = 85
+print("Marks:", marks)
+print("Grade:", calculate_grade(marks))
 
-def display_students():
-    for student in students:
-        print(student)
-
-add_student("Rahul", 101)
-add_student("Priya", 102)
-
-display_students()
